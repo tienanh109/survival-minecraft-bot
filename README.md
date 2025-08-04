@@ -76,7 +76,8 @@ Bạn có thể chỉnh qua và khởi động lại server để áp dụng tha
 ### 🚀 Todo list:
 - 🟨 Lệnh: mine - Khai thác và thu thập khoáng sản
 - 🟨 Lệnh: drop-filter - Thả đồ dựa trên bộ lọc
-- 🟨 Lệnh: hunter - Thợ săn và thu thập thành quả 
+- 🟨 Lệnh: hunter - Thợ săn và thu thập thành quả
+- 🟨 Lệnh: build - Xây dựng
 - 🟨 Thông minh: Tự động cầm rìu hoặc sử dụng công cụ thích hợp để chặt rìu
 - 🟨 Tối ưu hóa trải nghiệm của người chơi
 
