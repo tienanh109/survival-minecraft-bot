@@ -1,4 +1,5 @@
 module.exports = (bot, username, args) => {
-  bot.chat(`có cái l-`)
+  bot.chat(`chưa khả dụng`)
 }
+
 // Made by tienanh109
