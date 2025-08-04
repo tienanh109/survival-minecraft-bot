@@ -16,3 +16,4 @@ module.exports = async (bot, username, args) => {
   bot.chat(`✅ Đã vứt hết.`)
 }
 // Made by tienanh109
+// chua tinh giapp
