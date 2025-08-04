@@ -48,11 +48,11 @@ npm install
 
 ```bash
 # mở trò chơi, bật LAN
+
 # đọc và cấu hình ip, port, etc vào file config.js
 nano config.js
-```
 
-```bash
+# Khởi động server
 node main.js
 ```
 ---
@@ -72,6 +72,13 @@ Bạn có thể chỉnh qua và khởi động lại server để áp dụng tha
 
 - Bạn có thể mở rộng commands cho bot nếu muốn, có thể mở PR để đóng góp, sửa lỗi. [Cụ thể hướng dẫn tại đây](https://github.com/tienanh109/survival-minecraft-bot/blob/main/examples/tutorial-dev.md)
 - Bot vẫn trong giai đoạn phát triển nên còn khá nhiều sai sót.
+
+### Todo list:
+- 🟨 Command: mine - Mineral exploration and collection
+- 🟨 Command: drop-filter - drop items based on filter
+- 🟨 Command: hunter - hunter and butcher
+- 🟨 Smarten up: Automatically hold an axe or use the appropriate tool to cut down a tree
+- 🟨 Optimize player experience
 
 
 ## 💖 Đóng góp
