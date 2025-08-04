@@ -57,7 +57,7 @@ node main.js
 ```
 ---
 
-**Nếu bạn gặp khó khăn trong quá trình cài đặt, [tham gia máy chủ của chúng tôi để được hỗ trợ!**](https://tienanh109.github.io/dc)
+**Nếu bạn gặp khó khăn trong quá trình cài đặt, [tham gia máy chủ của chúng tôi để được hỗ trợ!](https://tienanh109.github.io/dc)**
 
 ## ⚙️ Cấu hình
 
