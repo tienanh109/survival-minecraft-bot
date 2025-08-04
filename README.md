@@ -73,12 +73,12 @@ Bạn có thể chỉnh qua và khởi động lại server để áp dụng tha
 - Bạn có thể mở rộng commands cho bot nếu muốn, có thể mở PR để đóng góp, sửa lỗi. [Cụ thể hướng dẫn tại đây](https://github.com/tienanh109/survival-minecraft-bot/blob/main/examples/tutorial-dev.md)
 - Bot vẫn trong giai đoạn phát triển nên còn khá nhiều sai sót.
 
-### Todo list:
-- 🟨 Command: mine - Mineral exploration and collection
-- 🟨 Command: drop-filter - drop items based on filter
-- 🟨 Command: hunter - hunter and butcher
-- 🟨 Smarten up: Automatically hold an axe or use the appropriate tool to cut down a tree
-- 🟨 Optimize player experience
+### 🚀 Todo list:
+- 🟨 Lệnh: mine - Khai thác và thu thập khoáng sản
+- 🟨 Lệnh: drop-filter - Thả đồ dựa trên bộ lọc
+- 🟨 Lệnh: hunter - Thợ săn và thu thập thành quả 
+- 🟨 Thông minh: Tự động cầm rìu hoặc sử dụng công cụ thích hợp để chặt rìu
+- 🟨 Tối ưu hóa trải nghiệm của người chơi
 
 
 ## 💖 Đóng góp
