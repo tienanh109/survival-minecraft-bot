@@ -1,7 +1,7 @@
 # 🧠 AssistantMCSurvival Bot
 > Trợ lý ảo sinh tồn Minecraft (Java Edition) với lệnh, và khả năng mở rộng lệnh dễ dàng.
 
-![version](https://img.shields.io/badge/version-1.1-blue) ![mineflayer](https://img.shields.io/badge/mineflayer-4.5.x-green) ![node](https://img.shields.io/badge/node-%3E=16.x-orange)
+![version](https://img.shields.io/badge/version-1.1-blue) ![mineflayer](https://img.shields.io/badge/mineflayer-4.5.x-green) ![node](https://img.shields.io/badge/node-%3E=18.x-orange)
 
 ---
 
