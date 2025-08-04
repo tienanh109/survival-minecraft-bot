@@ -1,0 +1,138 @@
+<!-- webui/index.html -->
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bot Config Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🎮 Minecraft Bot Config (Beta)</h1>
+      <button id="theme-toggle">🌙</button>
+    </header>
+
+    <form id="config-form">
+      <h2>Cấu hình kết nối</h2>
+      <label>Host <input type="text" name="host" /></label>
+      <label>Port <input type="number" name="port" /></label>
+      <label>Phiên bản <input type="text" name="version" /></label>
+      <label>Auth
+        <select name="auth">
+          <option value="offline">offline</option>
+          <option value="mojang">mojang</option>
+          <option value="microsoft">microsoft</option>
+        </select>
+      </label>
+
+      <h2>Tài khoản</h2>
+      <label>Username <input type="text" name="username" /></label>
+      <label>Password <input type="password" name="password" /></label>
+
+      <h2>Giao tiếp</h2>
+      <label>Prefix <input type="text" name="prefix" /></label>
+      <label><input type="checkbox" name="autoRespondOnError" /> Trả lời khi lỗi</label>
+      <label><input type="checkbox" name="hideErrors" /> Ẩn lỗi console</label>
+
+      <h2>Mở rộng</h2>
+      <label><input type="checkbox" name="logging" /> Ghi log</label>
+      <label><input type="checkbox" name="logChat" /> Ghi log chat</label>
+
+      <h2>Whitelist</h2>
+      <textarea name="whitelist" placeholder="Tên người chơi, mỗi dòng một tên"></textarea>
+
+      <div class="buttons">
+        <button type="submit">💾 Lưu cấu hình</button>
+        <button id="start-bot" type="button">🚀 Khởi động bot</button>
+        <button id="stop-bot" type="button">🛑 Dừng bot</button>
+        <span id="bot-status">⚪ Chưa rõ</span>
+      </div>
+    </form>
+
+    <footer>
+      <p>Made by tienanh109 • <a href="https://github.com/tienanh109/survival-minecraft-bot" target="_blank">GitHub</a></p>
+    </footer>
+  </div>
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const form = document.getElementById('config-form');
+    const startBtn = document.getElementById('start-bot');
+    const stopBtn = document.getElementById('stop-bot');
+    const statusSpan = document.getElementById('bot-status');
+
+    // Toggle theme
+    themeToggle.onclick = () => {
+      document.body.classList.toggle('dark')
+      themeToggle.textContent = document.body.classList.contains('dark') ? '☀️' : '🌙'
+    }
+
+    // Fetch config
+    fetch('/api/config').then(res => res.json()).then(cfg => {
+      for (const key in cfg) {
+        const el = form.elements[key]
+        if (!el) continue
+
+        if (el.type === 'checkbox') el.checked = cfg[key]
+        else if (el.type === 'textarea' && Array.isArray(cfg[key])) el.value = cfg[key].join('\n')
+        else el.value = cfg[key]
+      }
+    })
+
+    // Save config
+    form.onsubmit = async (e) => {
+      e.preventDefault()
+      const data = {}
+      for (const el of form.elements) {
+        if (!el.name) continue
+        if (el.type === 'checkbox') data[el.name] = el.checked
+        else if (el.type === 'textarea') data[el.name] = el.value.split('\n').map(x => x.trim()).filter(Boolean)
+        else data[el.name] = el.value
+      }
+
+      const res = await fetch('/api/config', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+
+      if (res.ok) alert('✅ Đã lưu thành công!')
+      else alert('❌ Lỗi khi lưu config.')
+    }
+
+    // Start bot
+    startBtn.onclick = async () => {
+      const res = await fetch('/api/start', { method: 'POST' })
+      if (res.ok) {
+        alert('🤖 Bot đang khởi động...')
+        updateStatus()
+      } else alert('❌ Không thể khởi động bot.')
+    }
+
+    // Stop bot
+    stopBtn.onclick = async () => {
+      const res = await fetch('/api/stop', { method: 'POST' })
+      if (res.ok) {
+        alert('🛑 Bot đã dừng.')
+        updateStatus()
+      } else alert('❌ Không thể dừng bot.')
+    }
+
+    // Update bot status
+    async function updateStatus() {
+      try {
+        const res = await fetch('/api/status')
+        const data = await res.json()
+        statusSpan.textContent = data.running ? '🟢 Đang chạy' : '🔴 Đã dừng'
+      } catch (e) {
+        statusSpan.textContent = '⚪ Không rõ'
+      }
+    }
+
+    // Tự động check trạng thái bot mỗi 3s
+    setInterval(updateStatus, 3000)
+    updateStatus()
+  </script>
+</body>
+</html>
