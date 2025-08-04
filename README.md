@@ -1,5 +1,5 @@
 # 🧠 AssistantMCSurvival Bot
-> Tự động hóa sinh tồn Minecraft (Java Edition 1.9) với lệnh, giao diện web cấu hình, và khả năng mở rộng lệnh dễ dàng.
+> Trợ lý ảo sinh tồn Minecraft (Java Edition) với lệnh, và khả năng mở rộng lệnh dễ dàng.
 
 ![version](https://img.shields.io/badge/version-1.0-blue) ![mineflayer](https://img.shields.io/badge/mineflayer-4.5.x-green) ![node](https://img.shields.io/badge/node-%3E=16.x-orange)
 
