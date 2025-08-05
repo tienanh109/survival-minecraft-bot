@@ -81,6 +81,8 @@ Bạn có thể chỉnh qua và khởi động lại server để áp dụng tha
 - 🟨 Thông minh: Tự động cầm rìu hoặc sử dụng công cụ thích hợp để chặt cây
 - 🟨 Tối ưu hóa trải nghiệm của người chơi
 
+`✅ là đã xong và chờ cập nhật, 🟨 là đang làm`
+
 
 ## 💖 Đóng góp
 
