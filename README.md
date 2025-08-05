@@ -23,7 +23,7 @@
 ## 🧠 Yêu cầu
 
 - Minecraft Java Edition (khuyến nghị 1.9 trở lên)
-- Node.js >= 16
+- Node.js >= 18
 - Kết nối mạng ổn định nếu dùng tài khoản online
 
 ---
