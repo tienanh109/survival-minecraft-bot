@@ -74,14 +74,12 @@ Bạn có thể chỉnh qua và khởi động lại server để áp dụng tha
 - Bot vẫn trong giai đoạn phát triển nên còn khá nhiều sai sót.
 
 ### 🚀 Todo list:
-- ✅ Lệnh: mine - Khai thác và thu thập khoáng sản
-- ✅ Lệnh: drop-filter - Thả đồ dựa trên bộ lọc
-- ✅ Lệnh: hunt - Thợ săn và thu thập thành quả
 - (✅) Lệnh repeat - lặp lệnh
 - 🟨 Lệnh: build - Xây dựng
+- 🟨 Lệnh mới
 - 🟨 Thông minh: Tự động cầm rìu hoặc sử dụng công cụ thích hợp để chặt cây
 - 🟨 Tối ưu hóa trải nghiệm của người chơi
-- 🟨 Đẩy code & update 1.2
+- 🟨 Đẩy code & update 1.3
 
 `✅ là đã xong và chờ cập nhật, 🟨 là đang làm, () là đang xử lý.`
 
