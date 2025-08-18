@@ -31,7 +31,7 @@
 ## 📦 Cài đặt
 
 ```bash
-# Cài Node.js >= 16.0 nếu chưa có
+# Cài Node.js >= 18.0 nếu chưa có
 https://nodejs.org/
 
 # Clone repo này về
